@@ -1,0 +1,36 @@
+title: Text Overflow
+purpose: Check the edge cases of a line being exactly full, or one dot too long
+hp82240PrintData:
+    # Print 24 characters, line just full
+    - text: Single, full
+    - linefeed: hp
+    - text: ------------------------
+    - linefeed: hp
+    # Print a one dot row, then 24 characters
+    - text: Single, too big
+    - linefeed: hp
+    - graphic: FF
+    - text: ------------------------
+    - linefeed: hp
+    # Doublewide: 6 Chars, 2 rows, 6 chars. Line is exactly full
+    - text: Double, full
+    - linefeed: hp
+    - esc: doublewide
+    - text: ------
+    - esc: end_doublewide
+    - graphic: FFFF
+    - esc: doublewide
+    - text: ------
+    - esc: end_doublewide
+    - linefeed: hp
+    # Doublewide: 6 Chars, three rows, 6 chars. Line is exactly full
+    - text: Double, too big
+    - linefeed: hp
+    - esc: doublewide
+    - text: ------
+    - esc: end_doublewide
+    - graphic: FFFFFF
+    - esc: doublewide
+    - text: ------
+    - esc: end_doublewide
+    - linefeed: hp

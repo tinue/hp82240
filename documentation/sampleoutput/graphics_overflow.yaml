@@ -1,0 +1,11 @@
+title: Graphics Overflow
+purpose: Check if the graphics at the end of a line flows over to the next line.
+hp82240PrintData:
+    - text: Test - 2 Dots flow over
+    - linefeed: hp
+    # Print 23 characters (there is room for 24)
+    - text: ---------------------->
+    # Send 8 graphic bytes (an arrow), 2 should flow over
+    - graphic: 08080808492A1408
+    # Force output
+    - linefeed: hp

@@ -1,0 +1,20 @@
+title: test
+purpose: Dummy file for unit testing
+hp82240PrintData:
+  - text: AÑ√
+  - linefeed: regular
+  - graphic: 010204080F
+  - linefeed: hp
+  - esc: reset
+  - esc: SELFTEST
+  - esc: doublewide
+  - esc: end_doublewide
+  - esc: underline
+  - esc: end_underline
+  - esc: iso8859
+  - esc: end_iso8859
+  - linefeed: hp
+  - esc: SOMETHING
+  - linefeed: hp
+  - hex: 00010203
+  - linefeed: regular

@@ -1,0 +1,24 @@
+# IDE
+.idea/
+target/
+*.iml
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+Hp8224-Image.png
+Hp8224-Text.txt
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Mac OS
+**/.DS_Store

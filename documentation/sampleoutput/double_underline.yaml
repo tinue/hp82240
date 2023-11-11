@@ -1,0 +1,29 @@
+title: Double Underline
+purpose: Test double wide and underlined printing
+hp82240PrintData:
+    # Stop double wide and underline
+    - esc: end_doublewide
+    - esc: end_underline
+    - linefeed: hp
+    - text: Plain text
+    - linefeed: hp
+    # Start double wide
+    - esc: doublewide
+    - linefeed: hp
+    - text: Doublewide
+    - linefeed: hp
+    # Stop double wide, start underline
+    - esc: end_doublewide
+    - esc: underline
+    - linefeed: hp
+    - text: Underscore
+    - linefeed: hp
+    # Start doublewide, underline is already active
+    - esc: doublewide
+    - linefeed: hp
+    - text: UnderDouble
+    - linefeed: hp
+    # Stop both to be ready for a next test
+    - esc: end_underline
+    - esc: end_doublewide
+    - linefeed: hp

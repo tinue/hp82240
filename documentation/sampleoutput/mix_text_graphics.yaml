@@ -1,0 +1,29 @@
+title: Mix of Text and Graphic
+purpose: Test mixed text and graphics on one line
+hp82240PrintData:
+    - text: Mix Text / Graphics
+    - linefeed: hp
+    # Print some characters
+    - text: -->
+    # Send some graphic bytes
+    - graphic: 0102040810204080
+    # More characters
+    - text: <--
+    # Force output
+    - linefeed: hp
+    # Same underlined
+    - esc: underline
+    - text: -->
+    - graphic: 0102040810204080
+    - text: <--
+    - linefeed: hp
+    # Same Double Wide
+    - esc: end_underline
+    - esc: doublewide
+    - text: -->
+    - graphic: 0102040810204080
+    - text: <--
+    - linefeed: hp
+    # Reset Printer
+    - esc: reset
+    - linefeed: hp

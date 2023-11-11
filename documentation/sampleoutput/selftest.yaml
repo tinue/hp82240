@@ -1,0 +1,5 @@
+title: Self Test
+purpose: Sends a self test command to the printer.
+hp82240PrintData:
+    # Self test
+    - esc: selftest

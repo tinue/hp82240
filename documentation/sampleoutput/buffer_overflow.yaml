@@ -1,0 +1,32 @@
+title: Buffer Overflow
+purpose: Test more than 200 bytes before line feed. Will also trigger line overflow (more than 132 dots)
+hp82240PrintData:
+    - text: Test Buffer Overflow
+    - linefeed: hp
+    # Print some characters
+    - text: -->
+    # Send 8 graphic bytes (an arrow), uses up 10 bytes. Send 10 of them.
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    - graphic: 08080808492A1408
+    # Force output
+    - linefeed: hp
+    # Reset the printer
+    - esc: reset
